@@ -8,6 +8,7 @@ function createBoxes(amount) {
   const boxesContainer = document.getElementById('boxes');
   boxesContainer.innerHTML = '';
   
+  const fragment = document.createDocumentFragment();
   let size = 30;
   
   for (let i = 0; i < amount; i++) {
@@ -18,6 +19,7 @@ function createBoxes(amount) {
     boxesContainer.appendChild(box);
     size += 10;
   }
+  boxesContainer.appendChild(fragment);
 }
 
 function destroyBoxes() {
